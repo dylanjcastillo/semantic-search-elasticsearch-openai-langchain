@@ -16,6 +16,7 @@ python-dotenv = "^1.0.0"
 beautifulsoup4 = "^4.12.2"
 lxml = "^4.9.2"
 tiktoken = "^0.3.3"
+fastapi = {extras = ["all"], version = "^0.95.1"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"
