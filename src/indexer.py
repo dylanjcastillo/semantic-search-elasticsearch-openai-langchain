@@ -10,7 +10,9 @@ def main():
     loader = BSHTMLLoader(str(Paths.book))
     data = loader.load()
 
-    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=1000, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+        chunk_size=1000, chunk_overlap=0
+    )
     documents = text_splitter.split_documents(data)
 
     embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
